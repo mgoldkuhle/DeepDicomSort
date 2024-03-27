@@ -1,0 +1,25 @@
+preprocessing:
+    root_folder: /mnt/share/00_patientsdata/
+    dcm2niix_bin: /usr/local/bin/dcm2niix
+    fslreorient2std_bin: /usr/bin/fsl/bin/fslreorient2std
+    fslval_bin: /usr/bin/fsl/bin/fslval
+
+data_preparation:
+    image_size_x: 256
+    image_size_y: 256
+    image_size_z: 25
+
+training:
+    train_label_file: /path/to/train/label/file.txt
+    output_folder: /path/to/output/folder/
+
+testing:
+    test_label_file: /mnt/share/DeepDicomSorted/DATA/labels.txt
+    output_folder: /mnt/share/DeepDicomSorted/OUTPUT/
+    
+post_processing:
+    prediction_file: /mnt/share/DeepDicomSort/OUTPUT/predictions.csv
+
+network:
+    batch_size: 32
+    nb_epoch: 100
